@@ -1,0 +1,26 @@
+<p *ngFor="let item of listClientes" (click)="mostrarSeleccion(item)">
+    {{item.nombre}}
+    <br/>
+    {{item.edad}}
+    <br/>
+    {{item.direccion}}
+    <br/>
+    {{item.cargo}}
+   <input type="checkbox" name="Informatico" [(ngModel)]="item.cargo">
+   <input type="radio" [name]="item.nombre"  [(ngModel)]="item.lenguaje" value="Java"> Java
+   <input type="radio" [name]="item.nombre"  [(ngModel)]="item.lenguaje" value="C#"> C#
+   <input type="radio" [name]="item.nombre"  [(ngModel)]="item.lenguaje" value="Phyton"> Phyton
+</p>
+<h1>La persona seleccionada es: {{itemSelected?.nombre}} - {{itemSelected?.cargo}}
+    <p>Lenguaje Favorito: {{itemSelected?.lenguaje}}</p>
+</h1>
+<p *ngIf="visible">Hola este es un parrafo desde Angular 8+</p>
+<input type="button" (click)="mostrar()">
+<input type="button" (click)="ocultar()">
+
+<select [(ngModel)]="seleccion">
+    <option *ngFor="let item of listCadena" [value]="item">
+        {{item}}
+    </option>
+</select>
+{{seleccion}}

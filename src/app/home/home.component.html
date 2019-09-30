@@ -1,0 +1,13 @@
+<p>Bienvenidos a la web con angular 8+</p>
+<!--Enlace por Interpolacion-->
+{{nombre}}
+<!--Property Binding Unidireccional-->
+<img [src]=imagen />
+<p>{{contador}}</p>
+<input type="button" value="+" (click)="incrementar()"/>
+<input type="button" value="-" (click)="decrementar()"/>
+<ul>
+    <li>{{persona.nombre}}</li>
+    <li>{{persona.edad}}</li>
+    <li>{{persona.direccion}}</li>
+</ul>
